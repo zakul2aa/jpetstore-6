@@ -17,7 +17,7 @@ pipeline {
 
     stage('Static Analysis') {
       steps {
-        sh '''./mvnw clean verify sonar:sonar \\
+        sh '''./mvnw sonar:sonar \\
   -Dsonar.projectKey=JPetstore \\
   -Dsonar.projectName=\'JPetstore\' \\
   -Dsonar.host.url=http://65.1.181.224:9000 \\
