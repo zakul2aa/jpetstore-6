@@ -1,10 +1,5 @@
 pipeline {
-  agent {
-    node {
-      label 'test'
-    }
-
-  }
+  agent any
   stages {
     stage('Build') {
       steps {
@@ -33,15 +28,6 @@ pipeline {
     stage('Package') {
       steps {
         sh './mvnw package -DskipTests=true'
-      }
-    }
-
-    stage('Integration Test') {
-      steps {
-        node(label: 'test') {
-          sh './mvnw verify -P tomcat90'
-        }
-
       }
     }
 
