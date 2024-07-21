@@ -20,7 +20,7 @@ pipeline {
         sh '''./mvnw sonar:sonar \\
   -Dsonar.projectKey=JPetstore \\
   -Dsonar.projectName=\'JPetstore\' \\
-  -Dsonar.host.url=http://65.1.181.224:9000 \\
+  -Dsonar.host.url=http://13.200.143.107:9000 \\
   -Dsonar.token=sqp_069fcdbfd83932f92ef7a5236ecb843f522e4d8c'''
       }
     }
